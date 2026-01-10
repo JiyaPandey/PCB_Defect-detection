@@ -4,9 +4,7 @@ Automated PCB quality inspection system using YOLOv8 for detecting manufacturing
 
 ## 📹 Demo Video
 
-> **Add your demo video here!**  
-> - YouTube: `[![Demo Video](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)`
-> - Or link directly: `[Watch Demo Video](your-video-link-here)`
+> [Uploading Screencast from 01-10-2026 10:36:56 PM.webm…]()
 
 ## 🔍 What Does This Detect?
 
