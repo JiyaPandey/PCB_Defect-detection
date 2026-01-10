@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+
+# YOLOv8 training outputs
+runs/
+
+# Data cache
+*.cache
+
+# Results
+results/demo_output/
+results/output_images/
+
+# OS
+.DS_Store
+Thumbs.db
