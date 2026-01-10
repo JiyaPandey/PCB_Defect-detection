@@ -1,17 +1,20 @@
 # PCB Defect Detection using YOLOv8
 
-Automated PCB quality inspection system using YOLOv8 for detecting manufacturing defects.
+Automated PCB quality inspection system using YOLOv8 for detecting manufacturing defects in real-time.
 
-## 🎯 Features
+## 📹 Demo Video
 
-- **3 Defect Types Detection:**
-  - Missing components
-  - Misaligned components
-  - Solder defects
-  
-- **Real-time Inspection** with confidence scores
-- **Interactive Demo** with visual feedback
-- **Pre-trained Model** included for immediate use
+> **Add your demo video here!**  
+> - YouTube: `[![Demo Video](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)`
+> - Or link directly: `[Watch Demo Video](your-video-link-here)`
+
+## 🔍 What Does This Detect?
+
+This system identifies three critical PCB manufacturing defects:
+
+- **Missing Components**: Identifies components that are absent from the PCB, ensuring all required parts are present
+- **Misaligned Components**: Detects components placed incorrectly or at wrong angles, preventing assembly issues
+- **Solder Defects**: Spots issues with solder joints including insufficient solder, bridges, and cold joints
 
 ## 📁 Project Structure
 
@@ -35,94 +38,50 @@ PCB_Defect-detection/
 
 ## 🚀 Quick Start
 
-### 1. Installation
-
+**1. Clone and Install**
 ```bash
-# Clone the repository
 git clone https://github.com/JiyaPandey/PCB_Defect-detection.git
 cd PCB_Defect-detection
-
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install dependencies
 pip install -r requirements.txt
 ```
 
-### 2. Run Demo
-
+**2. Run Inspection**
 ```bash
-# Interactive demo (10 random images)
+python demo.py              # Interactive demo with 10 random images
+python pcb_inspect.py       # Inspect a single image
+```
+
+**3. Custom Images** (optional)
+```bash
+mkdir demoimg && cp your_image.jpg demoimg/
 python demo.py
-
-# Or inspect single image
-python pcb_inspect.py
 ```
 
-### 3. Train from Scratch (Optional)
-
+**4. Train Your Own Model** (optional)
 ```bash
-python train.py
+python train.py             # Customize pcb.yaml for your dataset
 ```
 
-## 📊 Model Performance
+## 📊 Results
 
 - **Accuracy:** 99.2% mAP@0.5
 - **Training Time:** ~16 minutes on RTX 3050
 - **Inference Speed:** Real-time (30+ FPS)
 
-## 🎨 Demo Features
+**Visual Output:**
+- 🔴 Red boxes: Missing components
+- 🟠 Orange boxes: Misaligned components  
+- 🟡 Yellow boxes: Solder defects
+- Auto-advance every 3 seconds (press 'q' to skip)
+- All results saved to `results/demo_output/`
 
-- **Color-coded defects:**
-  - 🔴 Red: Missing components
-  - 🟠 Orange: Misaligned components
-  - 🟡 Yellow: Solder defects
-  
-- **Auto-advance:** 3 seconds per image (press 'q' to skip)
-- **Saved outputs:** All inspected images saved to `results/demo_output/`
-
-## 📸 Custom Demo Images
-
-Place your PCB images in `demoimg/` folder to run demo on specific images:
-
-```bash
-mkdir demoimg
-cp your_pcb_image.jpg demoimg/
-python demo.py
-```
-
-## 🛠️ Technical Details
+## 🛠️ Technical Specifications
 
 - **Framework:** YOLOv8 (Ultralytics)
-- **Base Model:** YOLOv8n (nano) - pretrained on COCO
-- **Image Size:** 640x640
-- **Batch Size:** 8
-- **Training Epochs:** 50 (with early stopping)
-
-## 📝 Requirements
-
-- Python 3.8+
-- PyTorch 2.0+
-- OpenCV
-- Ultralytics YOLO
-
-See `requirements.txt` for complete list.
-
-## 🎓 Training Configuration
-
-Edit `pcb.yaml` to customize:
-- Dataset paths
-- Number of classes
-- Class names
-
-Training parameters in `train.py`:
-- Epochs, batch size, image size
-- Learning rate, patience, etc.
-
-## 📈 Results
-
-Model achieves excellent performance with minimal training data through transfer learning from COCO-pretrained YOLOv8.
+- **Base Model:** YOLOv8n (nano) pretrained on COCO
+- **Requirements:** Python 3.8+, PyTorch 2.0+, OpenCV
+- **Training Config:** 50 epochs, batch size 8, 640x640 images
+- **Performance:** Transfer learning achieves excellent results with minimal training data
 
 ## 🤝 Contributing
 
