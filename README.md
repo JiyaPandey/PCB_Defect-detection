@@ -1,4 +1,4 @@
-
+# PCB_Defect Detection 
 
 Automated PCB quality inspection system using YOLOv8 for detecting manufacturing defects in real-time.
 
