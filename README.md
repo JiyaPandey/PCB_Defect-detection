@@ -20,9 +20,24 @@ https://github.com/user-attachments/assets/af88f608-1ead-4769-a7b1-39188afe0f98
 
 ## 📊 Results
 
-- **Accuracy:** 99.2% mAP@0.5
+### Model Performance
+- **mAP@0.5:** 99.17%
+- **mAP@0.5:0.95:** 71.50%
+- **Precision:** 97.78%
+- **Recall:** 98.30%
+- **F1 Score:** 98.04%
+
+### Per-Class Performance
+| Class | Instances | Precision | Recall | mAP@0.5 | mAP@0.5:0.95 |
+|-------|-----------|-----------|--------|---------|--------------|
+| Missing Component | 114 | 97.4% | 96.8% | 98.7% | 63.3% |
+| Misaligned Component | 105 | 97.7% | 98.1% | 99.3% | 71.8% |
+| Solder Defect | 98 | 98.3% | 100.0% | 99.5% | 79.3% |
+
+### Training & Inference
 - **Training Time:** ~16 minutes on RTX 3050
-- **Inference Speed:** Real-time (30+ FPS)
+- **Inference Speed:** Real-time (30+ FPS on GPU)
+- **CPU Inference:** ~99ms per image (2.2ms preprocess + 85.8ms inference + 11.4ms postprocess)
 
 **Visual Output:**
 - 🔴 Red boxes: Missing components
