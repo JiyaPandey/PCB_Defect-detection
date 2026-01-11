@@ -1,4 +1,4 @@
-[Screencast from 01-10-2026 10:36:56 PM.webm](https://github.com/user-attachments/assets/af88f608-1ead-4769-a7b1-39188afe0f98)# PCB Defect Detection using YOLOv8
+
 
 Automated PCB quality inspection system using YOLOv8 for detecting manufacturing defects in real-time.
 
@@ -14,9 +14,8 @@ This system identifies three critical PCB manufacturing defects:
 
 ## 📹 Demo Video
 
-> [Uploading Screencast from 01-10-2026 10:36:56 PM.webm…]()
+> [Screencast from 01-10-2026 10:36:56 PM.webm](https://github.com/user-attachments/assets/af88f608-1ead-4769-a7b1-39188afe0f98)# PCB Defect Detection using YOLOv8
 
----
 
 ## 📊 Results
 
