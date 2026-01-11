@@ -2,10 +2,6 @@
 
 Automated PCB quality inspection system using YOLOv8 for detecting manufacturing defects in real-time.
 
-## 📹 Demo Video
-
-> [Uploading Screencast from 01-10-2026 10:36:56 PM.webm…]()
-
 ## 🔍 What Does This Detect?
 
 This system identifies three critical PCB manufacturing defects:
@@ -14,25 +10,28 @@ This system identifies three critical PCB manufacturing defects:
 - **Misaligned Components**: Detects components placed incorrectly or at wrong angles, preventing assembly issues
 - **Solder Defects**: Spots issues with solder joints including insufficient solder, bridges, and cold joints
 
-## 📁 Project Structure
+---
 
-```
-PCB_Defect-detection/
-├── weights/              # Trained YOLOv8 model weights
-│   ├── best.pt          # Best model checkpoint
-│   └── last.pt          # Last training checkpoint
-├── data/                 # PCB images and annotations
-│   ├── images/          # PCB images
-│   ├── labels/          # YOLO format labels
-│   └── classes.txt      # Class names
-├── demoimg/              # Custom demo images (optional)
-├── results/              # Inspection output
-├── demo.py               # Interactive demo script
-├── train.py              # Training script
-├── pcb_inspect.py        # Single image inspection
-├── pcb.yaml              # Dataset configuration
-└── requirements.txt      # Python dependencies
-```
+## 📹 Demo Video
+
+> [Uploading Screencast from 01-10-2026 10:36:56 PM.webm…]()
+
+---
+
+## 📊 Results
+
+- **Accuracy:** 99.2% mAP@0.5
+- **Training Time:** ~16 minutes on RTX 3050
+- **Inference Speed:** Real-time (30+ FPS)
+
+**Visual Output:**
+- 🔴 Red boxes: Missing components
+- 🟠 Orange boxes: Misaligned components  
+- 🟡 Yellow boxes: Solder defects
+- Auto-advance every 3 seconds (press 'q' to skip)
+- All results saved to `results/demo_output/`
+
+---
 
 ## 🚀 Quick Start
 
@@ -60,18 +59,29 @@ python demo.py
 python train.py             # Customize pcb.yaml for your dataset
 ```
 
-## 📊 Results
+---
 
-- **Accuracy:** 99.2% mAP@0.5
-- **Training Time:** ~16 minutes on RTX 3050
-- **Inference Speed:** Real-time (30+ FPS)
+## 📁 Project Structure
 
-**Visual Output:**
-- 🔴 Red boxes: Missing components
-- 🟠 Orange boxes: Misaligned components  
-- 🟡 Yellow boxes: Solder defects
-- Auto-advance every 3 seconds (press 'q' to skip)
-- All results saved to `results/demo_output/`
+```
+PCB_Defect-detection/
+├── weights/              # Trained YOLOv8 model weights
+│   ├── best.pt          # Best model checkpoint
+│   └── last.pt          # Last training checkpoint
+├── data/                 # PCB images and annotations
+│   ├── images/          # PCB images
+│   ├── labels/          # YOLO format labels
+│   └── classes.txt      # Class names
+├── demoimg/              # Custom demo images (optional)
+├── results/              # Inspection output
+├── demo.py               # Interactive demo script
+├── train.py              # Training script
+├── pcb_inspect.py        # Single image inspection
+├── pcb.yaml              # Dataset configuration
+└── requirements.txt      # Python dependencies
+```
+
+---
 
 ## 🛠️ Technical Specifications
 
@@ -81,20 +91,28 @@ python train.py             # Customize pcb.yaml for your dataset
 - **Training Config:** 50 epochs, batch size 8, 640x640 images
 - **Performance:** Transfer learning achieves excellent results with minimal training data
 
-## 🤝 Contributing
+---
 
-Contributions welcome! Please feel free to submit a Pull Request.
+## 🙏 Acknowledgments
 
-## 📄 License
+- YOLOv8 by Ultralytics
+- DeepPCB dataset for training data
 
-This project is open source and available under the MIT License.
+---
 
 ## 👤 Author
 
 **Jiya Pandey**
 - GitHub: [@JiyaPandey](https://github.com/JiyaPandey)
 
-## 🙏 Acknowledgments
+---
 
-- YOLOv8 by Ultralytics
-- DeepPCB dataset for training data
+## 📄 License
+
+This project is open source and available under the MIT License.
+
+---
+
+## 🤝 Contributing
+
+Contributions welcome! Please feel free to submit a Pull Request.
